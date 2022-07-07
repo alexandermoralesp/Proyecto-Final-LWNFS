@@ -294,7 +294,6 @@ static int lfs_fill_super (struct super_block *sb, void *data, int silent)
  * directory.
  */
 	root = lfs_make_inode (sb, S_IFDIR | 0755);
-	inode_init_owner(root, NULL, S_IFDIR | 0755);
 	if (! root)
 		goto out;
 	root->i_op = &lwnfs_dir_inode_operations;
